@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймер</title>
+    <style>
+        /* Стили для страницы */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #001f3f; /* Синий фон */
+            font-family: 'Roboto', sans-serif; /* Стильный шрифт */
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Заголовок */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffcc00; /* Золотистый цвет для заголовка */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Контейнер для таймера */
+        .timer-container {
+            position: relative;
+            background-color: #003366; /* Темно-синий цвет контейнера */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Стиль для текста таймера */
+        .timer {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffcc00; /* Золотистый цвет для таймера */
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        /* Анимация для текста таймера */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Таймер запущен</h1>
+        <div class="timer-container">
+            <div class="timer" id="countdown">10</div>
+        </div>
+    </div>
+
+    <script>
+        // Таймер на 1 минуту (10 секунд)
+        let countdown = 10;
+        const countdownElement = document.getElementById('countdown');
+
+        const timerInterval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            // Проверяем, если время закончилось
+            if (countdown <= 0) {
+                clearInterval(timerInterval);
+                // Переход на страницу с поздравлением
+                window.location.href = "page3.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

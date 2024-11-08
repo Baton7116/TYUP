@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поздравление</title>
+    <style>
+        /* Стили для страницы */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #001f3f; /* Синий фон */
+            font-family: 'Roboto', sans-serif; /* Стильный шрифт */
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Контейнер для видео и текста */
+        .content-container {
+            background-color: #003366; /* Темно-синий цвет контейнера */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Стиль для текста поздравления */
+        .congratulation-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffcc00; /* Золотистый цвет для текста */
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Видео */
+        video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <!-- Текст поздравления на арабском -->
+        <div class="congratulation-text">مبروك</div>
+        
+        <!-- Видео -->
+        <video src="video.mp4" controls autoplay></video>
+    </div>
+</body>
+</html>
